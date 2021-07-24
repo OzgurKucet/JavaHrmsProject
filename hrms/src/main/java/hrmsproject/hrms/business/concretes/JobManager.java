@@ -42,4 +42,12 @@ public class JobManager implements JobService{
 		return new SuccessResult("Ürün Eklendi");
 	}
 
+
+
+	@Override
+	public DataResult<Job> getJobByName(String name) {		
+		return new SuccessDataResult<Job>
+		(this.jobDao.findByJobName(name));
+	}
+
 }

@@ -3,13 +3,11 @@ package hrmsproject.hrms.business.abstracts;
 import java.util.List;
 
 import hrmsproject.hrms.core.unilities.results.DataResult;
-import hrmsproject.hrms.entities.concretes.Job;
 import hrmsproject.hrms.core.unilities.results.Result;
+import hrmsproject.hrms.entities.concretes.City;
 
-public interface JobService {
+public interface CityService {
 	
-	DataResult<List<Job>> getall();
-	Result add(Job job);
-	DataResult<Job> getJobByName(String name);
-	
+	DataResult<List<City>> getAll();
+	Result add(City city);
 }

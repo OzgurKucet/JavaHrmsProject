@@ -11,35 +11,30 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "jobs")
-@AllArgsConstructor
 @NoArgsConstructor
+@Table(name="cities")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobAdverts"})
-public class Job {	
+public class City {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "job_name")
-	private String jobName;
+	@Column(name = "name")
+	private String name;
 	
-	@Column(name="created_at")
-	private Date createdAt;
-	
-	@Column(name="is_active")
+	@Column(name = "is_active")
 	private boolean isActive;
 	
-	@Column(name="is_deleted")
+	@Column(name = "is_deleted")
 	private boolean isDeleted;
 	
-	
-	
+	@Column(name = "created_at")
+	private Date createdAt;
 }
